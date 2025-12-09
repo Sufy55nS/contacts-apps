@@ -22,3 +22,13 @@ def add_contact(self, contact):
                 return
 
         bucket.append(contact)
+
+def search_contact(self, name):
+        index = self._get_index(name)
+        bucket = self.contacts[index]
+
+        for contact in bucket:
+            if contact.name.lower() == name.lower():
+                return contact
+
+        return None
