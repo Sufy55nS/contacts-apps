@@ -7,3 +7,14 @@ def merge_sort(contacts):
     right = merge_sort(contacts[mid:])
 
     return merge(left, right)
+
+
+def merge_sort(contacts):
+    if len(contacts) <= 1:
+        return contacts
+
+    mid = len(contacts) // 2
+    left = merge_sort(contacts[:mid])
+    right = merge_sort(contacts[mid:])
+
+    return merge(left, right)
