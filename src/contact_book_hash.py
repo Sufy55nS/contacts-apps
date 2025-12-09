@@ -11,3 +11,14 @@ def _get_index(self, key):
         for char in key.lower():
             total += ord(char)
         return total % self.size
+
+def add_contact(self, contact):
+        index = self._get_index(contact.name)
+        bucket = self.contacts[index]
+
+        for i in range(len(bucket)):
+            if bucket[i].name.lower() == contact.name.lower():
+                bucket[i] = contact
+                return
+
+        bucket.append(contact)
