@@ -7,3 +7,10 @@ class Contact:
         self.company = company
         self.birthday = birthday
 
+def __str__(self):
+        return (
+            f"{self.name} | Phone: {self.phone} | Email: {self.email or 'N/A'} | "
+            f"Address: {self.address or 'N/A'} | Company: {self.company or 'N/A'} | "
+            f"Birthday: {self.birthday or 'N/A'}"
+        )
+
