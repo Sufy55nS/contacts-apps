@@ -32,3 +32,22 @@ def search_contact(self, name):
                 return contact
 
         return None
+
+def delete_contact(self, name):
+        index = self._get_index(name)
+        bucket = self.contacts[index]
+
+        for i, contact in enumerate(bucket):
+            if contact.name.lower() == name.lower():
+                del bucket[i]
+                return True
+        return False
+
+
+    def get_all(self):
+        all_contacts = []
+        for bucket in self.contacts:
+            for contact in bucket:
+                all_contacts.append(contact)
+        return all_contacts
+
