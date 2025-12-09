@@ -38,3 +38,12 @@ elif choice == "2":
                 print(result)
             else:
                 print("Contact not found.")
+
+  elif choice == "3":
+            name = input("Enter name to delete: ")
+            ok = book.delete_contact(name)
+
+            if ok:
+                print("Deleted.")
+            else:
+                print("Contact not found.")
