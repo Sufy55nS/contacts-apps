@@ -47,3 +47,17 @@ elif choice == "2":
                 print("Deleted.")
             else:
                 print("Contact not found.")
+
+ elif choice == "4":
+            contacts = book.get_all()
+            sorted_list = merge_sort(contacts)
+
+            print("\n---- CONTACT LIST ----")
+            for c in sorted_list:
+                print(c)
+
+            print("Goodbye.")
+            break
+
+        else:
+            print("Invalid choice.")
