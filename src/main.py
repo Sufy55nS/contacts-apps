@@ -28,3 +28,13 @@ def main():
         print("5. Exit")
 
         choice = input("Enter choice: ")
+
+elif choice == "2":
+            name = input("Enter name to search: ")
+            result = book.search_contact(name)
+
+            if result:
+                print("\nFOUND:")
+                print(result)
+            else:
+                print("Contact not found.")
